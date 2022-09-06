@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 12px;
+    font-family: 'Kumbh Sans', sans-serif;
+    background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#faq-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+    width: 56rem;
+    height: 32rem;
+    background-color: #fff;
+    border-radius: 1.5rem;
+    margin: 2rem;
+    box-shadow: 0px 10px 30px 0px hsl(240, 61%, 26%);
+}
+
+.image-one {
+    height: 100%;
+    width: 100%;
+    background-image: url("images/illustration-woman-online-desktop.svg"), url("images/bg-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: right -108% bottom 53%, left 108% bottom 33%;
+}
+
+.image-one img {
+    position: relative;
+    top: 41%;
+    right: 21.5%;
+}
+
+.image-two img,
+.image-three img {
+    display: none;
+}
+
+.content-card {
+    margin: 4rem 6rem 0 0;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 2rem;
+    color: hsl(238, 29%, 16%);
+    margin-bottom: 2rem;
+}
+
+.qna-accordion {
+    padding-bottom: 1.1rem;
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+    margin-bottom: 1.1rem;
+}
+
+.question {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    font-size: 1rem;
+    color: hsl(240, 6%, 50%);
+    transition: 0.3s;
+}
+
+.question:hover {
+    color: hsl(14, 88%, 65%);
+}
+
+.active .question {
+    color: hsl(238, 29%, 16%);
+    font-weight: 700;
+}
+
+.arrow {
+    align-self: center;
+    transform: rotate(0deg);
+    transition: all 0.3s ease-in;
+    margin-left: 2rem;
+}
+
+.active .arrow {
+    transform: rotate(180deg);
+    transition: all 0.3s ease-in;
+}
+
+.answer {
+    display: none;
+}
+
+.active .answer {
+    display: block;
+    color: hsl(240, 6%, 50%);
+    padding-top: 0.5rem;
+    line-height: 1.5;
+    transition: all 0.3s ease-in;
+}
+
+@media (max-width: 990px) and (min-width: 768px){
+    #faq-card {
+        width: 45rem;
+        height: 29rem;
+    }
+
+    .image-one {
+        background-position: right -23% bottom 47%, left 104% bottom 37%;
+    }
+
+    .image-one img {
+        top: 55%;
+        right: -11%;
+    }
+
+    .content-card {
+        margin: 3rem 4rem 0 0;
+    }
+
+    .question {
+        font-size: 0.8rem;
+    }
+
+    .active .answer{
+        font-size: 0.7rem;
+    }   
+
+}
+
+@media (max-width: 768px) {
+    #faq-card {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 6rem 1fr;
+        width: 50rem;
+        height: 42rem;
+        margin: 16rem 5rem 6rem;
+    }
+
+    .image-one{
+        display: none;
+    }
+
+    .image-two img, .image-three img {
+        display: block;
+        margin: auto;
+        position: relative;
+        width: 28rem;
+        bottom: 12.7rem;
+    }
+
+    .image-three img{
+        bottom: 22rem;
+    }
+
+    .content-card{
+        margin: 4rem;
+    }
+
+    h1{
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .arrow{
+        margin-left: 1rem;
+    }
+}
+
+@media (max-width: 590px) {
+    #faq-card {
+        height: 38rem;
+        grid-template-rows: 5rem 1fr;
+        margin: 10rem 1.5rem 7rem;
+    }
+
+    .image-two img, .image-three img {
+        width: 18rem;
+        bottom: 8.2rem;
+    }
+
+    .image-three img {
+        bottom: 14rem;
+    }
+
+    .content-card{
+        margin: 3rem;
+    }
+
+    h1{
+        margin-bottom: 2rem;
+    }
+
+    .question{
+        font-size: 0.8rem;
+    }
+
+    .active .answer{
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 400px) {
+    #faq-card {
+        height: 36rem;
+        grid-template-rows: 5rem 1fr;
+        margin: 9rem 1.3rem 5rem;
+    }
+
+    .image-two img, .image-three img {
+        width: 14rem;
+        bottom: 6.4rem;
+    }
+
+    .image-three img {
+        bottom: 10.5rem;
+    }
+
+    .content-card{
+        margin: 1.5rem;
+    }
+
+}
+
+    
